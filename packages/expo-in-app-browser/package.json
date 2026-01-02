@@ -1,0 +1,77 @@
+{
+  "name": "@deuna/expo-in-app-browser",
+  "version": "1.0.0",
+  "description": "Expo In-App Browser for DEUNA",
+  "source": "./src/index.ts",
+  "main": "./lib/module/index.js",
+  "types": "./lib/typescript/src/index.d.ts",
+  "peerDependencies": {
+    "expo-web-browser": "*"
+  },
+  "exports": {
+    ".": {
+      "types": "./lib/typescript/src/index.d.ts",
+      "default": "./lib/module/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "lib",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "!**/.*"
+  ],
+  "scripts": {
+    "typecheck": "tsc",
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "clean": "del-cli lib",
+    "prepare": "bob build"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "in-app-browser",
+    "webview"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deuna-developers/deuna-sdk-react-native.git",
+    "directory": "packages/react-native-in-app-browser"
+  },
+  "author": "DEUNA (https://github.com/deuna-developers)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deuna-developers/deuna-sdk-react-native/issues"
+  },
+  "homepage": "https://github.com/deuna-developers/deuna-sdk-react-native/tree/main/packages/react-native-in-app-browser#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "del-cli": "^5.1.0",
+    "expo-web-browser": "^15.0.10",
+    "react-native-builder-bob": "^0.40.6",
+    "typescript": "^5.2.2"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      [
+        "module",
+        {
+          "esm": true
+        }
+      ],
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
+  }
+}

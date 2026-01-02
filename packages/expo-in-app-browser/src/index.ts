@@ -1,0 +1,1 @@
+export { ExpoWebBrowserAdapter } from './ExpoWebBrowserAdapter';
