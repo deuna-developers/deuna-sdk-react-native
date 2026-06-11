@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Build output
+lib/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+.yarn
