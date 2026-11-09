@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@deuna/react-native-sdk": ["../../src/index"],
+      "@react-navigation/native": [
+        "../react-native-cli/node_modules/@react-navigation/native",
+        "../expo/node_modules/@react-navigation/native"
+      ],
+      "@react-navigation/native-stack": [
+        "../react-native-cli/node_modules/@react-navigation/native-stack",
+        "../expo/node_modules/@react-navigation/native-stack"
+      ]
+    }
+  },
+  "include": ["src/**/*", "src/config.ts"],
+  "exclude": ["node_modules"]
+}
